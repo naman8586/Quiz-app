@@ -1,0 +1,133 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.quiz-container {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.quiz-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.question {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.timer {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.options {
+  list-style: none;
+  padding: 0;
+}
+
+.options li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin: 8px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.options li:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.correct {
+  background: green !important;
+  color: white;
+}
+
+.incorrect {
+  background: red !important;
+  color: white;
+}
+
+.next-btn, .restart-btn {
+  background: #ffcc00;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.next-btn.disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.next-btn.active:hover, .restart-btn:hover {
+  background: #e6b800;
+  transform: scale(1.1);
+}
+
+.progress {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  margin-top: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #ffcc00;
+  transition: width 0.3s;
+}
+
+.result {
+  font-size: 1.5rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.last-score {
+  font-size: 1.1rem;
+  color: #ffcc00;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
